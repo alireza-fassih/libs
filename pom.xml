@@ -6,36 +6,21 @@
 
     <groupId>ir.fassih</groupId>
     <artifactId>libs</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <version>${current.version}</version>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
-    </parent>
-
-    <modules>
-        <module>data-management</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <current.version>1.0-SNAPSHOT</current.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>ir.fassih</groupId>
-                <artifactId>data-management</artifactId>
-                <version>${current.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+        <relativePath/>
+    </parent>
 
 
     <dependencies>
@@ -63,5 +48,10 @@
             </plugin>
         </plugins>
     </build>
+
+
+    <modules>
+        <module>data-management</module>
+    </modules>
 
 </project>
