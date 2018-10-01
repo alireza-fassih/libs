@@ -25,3 +25,4 @@ jobs:
         key: v1-dependencies-{{ checksum "pom.xml" }}
 
     - run: mvn integration-test
+    - run: mvn com.gavinmogan:codacy-maven-plugin:coverage -DcoverageReportFile=target/site/jacoco/jacoco.xml -DprojectToken=$CODACY_TOKEN
