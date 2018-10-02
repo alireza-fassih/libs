@@ -28,4 +28,11 @@ public abstract class AbstractManager<T extends AbstractBaseEntity, I extends Se
         return entity.get();
     }
 
+    @Transactional
+    public void save(T entity) {
+        repository.save(entity);
+    }
+
+    
+
 }
