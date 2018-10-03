@@ -28,7 +28,7 @@ public class AbstractManagerTest {
 
 
     @Test
-    public void testLoad_entityExist() {
+    public void testLoadEntityExist() {
         SomeTrackableEntity save = repository.save(new SomeTrackableEntity());
         SomeTrackableEntity someTrackableEntity = manager.find(save.getId());
         Assert.assertNotNull(someTrackableEntity);
@@ -36,7 +36,7 @@ public class AbstractManagerTest {
 
 
     @Test(expected = EntityNotFoundException.class)
-    public void testLoad_entityNotExist() {
+    public void testLoadEntityNotExist() {
         manager.find(10001L);
     }
 
