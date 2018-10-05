@@ -35,7 +35,7 @@ public class SearchSpecification<T> implements Specification<T> {
         SearchMethod method = keyModel.getMethod();
         Path<?> path = extractPath(root, keyModel.getFieldName());
         if( method == SearchMethod.EQ ) {
-           return createEqualPredicate(path, value, cb);
+            return createEqualPredicate(path, value, cb);
         } else if ( method == SearchMethod.LIKE ) {
             return createLikePredicate(path, value, cb);
         }

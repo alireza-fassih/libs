@@ -25,3 +25,4 @@ jobs:
         key: v1-dependencies-{{ checksum "pom.xml" }}
 
     - run: mvn integration-test
+    - run: mvn clean test jacoco:report coveralls:report
