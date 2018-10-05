@@ -10,6 +10,7 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
